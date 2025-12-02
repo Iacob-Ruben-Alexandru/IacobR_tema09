@@ -1,0 +1,14 @@
+Raspunsuri intrebari EGC - Iacob Ruben-Alexandru
+Probleme de rezolvat: 
+Exercutiul 3 
+	În procesul de texturare a obiectelor 3D volumetrice (precum conul sau piramida) sau a suprafețelor non-rectangulare (cum este cercul), am observat că, dacă nu utilizez valorile unghiurilor pentru calcularea coordonatelor de textură, textura nu se map-ează corect pe suprafață. În special în cazul cercului, fără folosirea unghiurilor textura nu poate fi „întinsă” uniform, iar rezultatul este apariția unor linii vizibile între triunghiurile componente. Același efect se manifestă și la celelalte obiecte 3D, unde fiecare față primește coordonate incoerente, iar textura pare fragmentată în loc să formeze o imagine continuă.
+Exercitiul 6.1
+	În urma testelor efectuate pentru tema curentă, am reușit să implementez transparența utilizând o imagine cu canal alpha. Totuși, apar probleme în rularea codului atunci când folosesc această imagine, iar acestea duc la blocări sau comportamente neașteptate ale aplicației. În prezent, nu am identificat încă soluția pentru aceste erori. Eroarea fiind cauzata de "Out of memory.".
+Exercitiul 6.2
+	Formatele ce pot fi aplicate in procesul de texturare in OpenGL sunt: BMP, PNG, TGA, JPEG, DDS.
+Exercitiul 6.3 
+	Cand se modifica culoarea prin manipularea canalelor RGB obiectului texturat, textura obiectului ia culoarea specificata de noi prind cod.
+Exercitiul 6.4
+	Cand utilizam in scena iluminarea, putem aplica diferite culori obiectului, prin modificarea culorii ce loveste obiectul texturat.
+
+
