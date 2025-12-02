@@ -15,7 +15,9 @@ using System.Threading;
 
 namespace Pacanele
 {
-    
+    /// <summary>
+    /// Clasa Form1
+    /// </summary>
     public partial class Form1: Form
     {
         float eyePosX;
@@ -40,6 +42,11 @@ namespace Pacanele
             glControl1.Load += Form1_Load;
             glControl1.Paint += Form1_Paint;
         }
+        /// <summary>
+        /// Ce facem la Load
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             SetupValues();
@@ -47,12 +54,18 @@ namespace Pacanele
             GL.Hint(HintTarget.PerspectiveCorrectionHint, HintMode.Nicest);
             LoadTextures();
         }
+        /// <summary>
+        /// Initierea valorilor la load
+        /// </summary>
 
         private void SetupValues()
         {
             camDepth = 1.04f;
             numericUpDown2.Value = 1;
         }
+        /// <summary>
+        /// incarcarea texturilor
+        /// </summary>
         private void LoadTextures()
         {
             GL.GenTextures(textures.Length, textures);
@@ -79,6 +92,11 @@ namespace Pacanele
             GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (float)TextureMinFilter.Linear);
             GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (float)TextureMagFilter.Linear);
         }
+        /// <summary>
+        /// Functia de paint care pana la primul roll afiseaza 7.7.7
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Paint(object sender, EventArgs e)
         {
             glControl1.MakeCurrent();
@@ -120,6 +138,10 @@ namespace Pacanele
            
             glControl1.SwapBuffers();
         }
+        /// <summary>
+        /// Logica de tragere, nu am cum trece la bani negativi, implementarea ciclurilor si apoi verificarea daca am castigat sau nu
+        /// </summary>
+        /// <returns></returns>
         private async Task Tragere()
         {
             int tempA, tempB, tempC; 
@@ -190,10 +212,21 @@ namespace Pacanele
             inTragere = false;
             glControl1.Invalidate();
         }
+        /// <summary>
+        /// Cu acesta modific miza.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             miza = (int)numericUpDown1.Value;
         }
+        /// <summary>
+        /// Desenare Slots
+        /// </summary>
+        /// <param name="xStart"></param>
+        /// <param name="yStart"></param>
+        /// <param name="textureId"></param>
 
         private void drawSlot(int xStart, int yStart, int textureId)
         {
@@ -206,13 +239,20 @@ namespace Pacanele
             GL.End();
             
         }
-
+        /// <summary>
+        /// Cu acesta modific numarul de cicluri
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
             cicluri = (int)numericUpDown2.Value;
             glControl1.Invalidate();
         }
-
+        /// <summary>
+        /// daca apas pe butonul de tragere, verific daca sunt in animatia de tragere, sa previn click-urile multiple si de asemenea am implementat logica pentru
+        /// cand raman fara bani.
+        /// </summary>
         int ok = 0;
         private async void button1_Click(object sender, EventArgs e)
         {
