@@ -591,7 +591,7 @@ namespace OpenTK_winforms_z02 {
             } else if (statusCube.ToUpper().Equals("TRIANGLES")) {
                 DeseneazaCubT();
             }
-
+           
             if (statusCubeTex1 == true) {
                 DeseneazaCubQ_Tex1();
             }
@@ -604,7 +604,7 @@ namespace OpenTK_winforms_z02 {
             if (statusCubeTex4 == true) {
                 DeseneazaCubT_Tex4();
             }
-            
+            // desenam cerc
             if(Circle)
             {
                 if (ok == 0)
@@ -626,6 +626,7 @@ namespace OpenTK_winforms_z02 {
                 eyePosX = (int)numericXeye.Value;
 
             }
+            // desenam cilindru
             if(cylinder)
             {
                 drawCircle(10f);
@@ -634,6 +635,7 @@ namespace OpenTK_winforms_z02 {
                 drawCircle(10f);
                 
             }
+            //desenam piramida
             if(piramid)
             {
                 drawBase();
@@ -643,6 +645,7 @@ namespace OpenTK_winforms_z02 {
                 drawFace4();
                 
             }
+            //desenam cu textura transparenta
             if(transparent)
             {
                 GL.Enable(EnableCap.Blend);
@@ -654,6 +657,9 @@ namespace OpenTK_winforms_z02 {
             GlControl1.Invalidate();
 
         }
+        /// <summary>
+        /// Metoda pentru aplicarea unei texturi transparente
+        /// </summary>
         private void drawTransparent()
         {
             GL.BindTexture(TextureTarget.Texture2D, textures[2]);
@@ -681,6 +687,9 @@ namespace OpenTK_winforms_z02 {
             GL.End();
             GlControl1.Invalidate();
         }
+        /// <summary>
+        /// 4 metode pentru desenarea fetelor a piramidei
+        /// </summary>
         private void drawFace1()
         {
 
@@ -817,6 +826,9 @@ namespace OpenTK_winforms_z02 {
             GL.End();
             GlControl1.Invalidate();
         }
+        /// <summary>
+        /// desenarea bazei a piramidei
+        /// </summary>
         private void drawBase()
         {
             if (brick == true)
