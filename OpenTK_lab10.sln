@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTK_winforms_z03", "OpenTK_winforms_z03\OpenTK_winforms_z03.csproj", "{540F1C1E-8718-463A-A881-8DD1B93891A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacanele", "Pacanele\Pacanele.csproj", "{65058792-6C3C-4D96-9FE3-3B89B3C7275A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{540F1C1E-8718-463A-A881-8DD1B93891A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540F1C1E-8718-463A-A881-8DD1B93891A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540F1C1E-8718-463A-A881-8DD1B93891A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540F1C1E-8718-463A-A881-8DD1B93891A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65058792-6C3C-4D96-9FE3-3B89B3C7275A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65058792-6C3C-4D96-9FE3-3B89B3C7275A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65058792-6C3C-4D96-9FE3-3B89B3C7275A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65058792-6C3C-4D96-9FE3-3B89B3C7275A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05DEE7A5-D470-47B9-BB4F-0F848FB60713}
+	EndGlobalSection
+EndGlobal
